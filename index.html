@@ -11,13 +11,16 @@
 </head>
 <body>
 
-    <div id="app" class="container"></div>
+    <div id="app" class="container">
+        <!-- se l' array ha 10 elementi (in modo da stampare tutti insieme) -->
+        <ul v-if="emailList.length === 10">
+            <!-- stampo un list item per ogni elemento della lista  -->
+            <li v-for="email, i in emailList" :key="i">
+                {{email}}
+            </li>
+        </ul>
+    </div>
 
-    <ul v-if="emailList.length === 10">
-        <li v-for="email, i in emailList" :key="i">
-            {{email}}
-        </li>
-    </ul>
     
     <script src="script.js"></script>
 </body>
