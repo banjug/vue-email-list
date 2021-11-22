@@ -9,9 +9,7 @@ var app = new Vue({
             axios
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(function(element){
-                if (!self.emailList.includes(element)) {
-                    self.emailList.push(element.data.response)                
-                }
+                self.emailList.push(element.data.response)
             });
         }
         console.log(self.emailList);
